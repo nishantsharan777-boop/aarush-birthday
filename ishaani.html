@@ -1,0 +1,980 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aarush 🎂</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --gold: #ffd76a;
+  --pink: #ff75b9;
+  --purple: #a98aff;
+  --white: #fff;
+  --dark: #09091b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: white;
+  background:
+    radial-gradient(ellipse at 50% 0%, #34205f 0%, transparent 48%),
+    linear-gradient(145deg, #080817, #15102d 55%, #09091b);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button { font-family: inherit; }
+
+button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
+.stars-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.twinkle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 10px white;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .2; transform: scale(.7); }
+  to { opacity: 1; transform: scale(1.5); }
+}
+
+.screen {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 30px 18px 65px;
+}
+
+.hidden { display: none !important; }
+
+#intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.intro-card {
+  width: min(100%, 680px);
+  padding: 42px 25px;
+  border: 1px solid #ffffff25;
+  border-radius: 30px;
+  background: #ffffff0b;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 80px #0005;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 5px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.intro-card h1 {
+  font-size: clamp(34px, 7vw, 58px);
+  margin: 17px 0;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #fff, #ffd76a, #ff8ac8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.intro-card p {
+  color: #d8d1ed;
+  line-height: 1.7;
+}
+
+.balloon-area {
+  height: 260px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin: 20px 0;
+}
+
+.target-balloon {
+  width: 115px;
+  height: 145px;
+  border-radius: 50% 50% 45% 45%;
+  background: radial-gradient(circle at 30% 25%, #fff8, transparent 25%),
+              linear-gradient(135deg, #ff82ca, #a45cff);
+  box-shadow: 0 0 40px #e66aff8a, inset -10px -10px 20px #5d269a55;
+  position: relative;
+  animation: balloonFloat 2.5s ease-in-out infinite;
+  transition: .3s;
+}
+
+.target-balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 48%;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 14px solid #c25ddf;
+}
+
+.target-balloon::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background: #ffffff8a;
+  top: 150px;
+  left: 50%;
+}
+
+@keyframes balloonFloat {
+  0%,100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-17px) rotate(3deg); }
+}
+
+.arrow {
+  position: absolute;
+  font-size: 65px;
+  transform: rotate(-15deg);
+  left: 7%;
+  bottom: 20px;
+  filter: drop-shadow(0 0 12px #fff);
+  transition: .8s;
+}
+
+.arrow.fly {
+  left: 48%;
+  bottom: 130px;
+  opacity: 0;
+  transform: rotate(-15deg) scale(.6);
+}
+
+.primary-btn, .secondary-btn {
+  border: 0;
+  border-radius: 50px;
+  padding: 15px 28px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.primary-btn {
+  color: #25132f;
+  background: linear-gradient(110deg, #ffe38a, #ff9bce);
+  box-shadow: 0 0 25px #ffb6db65;
+}
+
+.primary-btn:hover, .secondary-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 35px #ffb6db55;
+}
+
+.secondary-btn {
+  color: white;
+  background: #ffffff17;
+  border: 1px solid #ffffff40;
+}
+
+#birthday {
+  text-align: center;
+  animation: reveal .9s ease both;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(30px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hero {
+  max-width: 900px;
+  margin: 20px auto 35px;
+}
+
+.hero .small-title {
+  color: var(--gold);
+  letter-spacing: 5px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(65px, 13vw, 125px);
+  line-height: 1.2;
+  margin: 10px 0;
+  background: linear-gradient(100deg, #fff4b8, #ff8fc9, #bda2ff, #fff4b8);
+  background-size: 250%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 5s linear infinite;
+  filter: drop-shadow(0 0 20px #f4a4ff55);
+}
+
+@keyframes shimmer {
+  to { background-position: 250% center; }
+}
+
+.hero p {
+  color: #e1d9f4;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.hero .wish {
+  color: var(--gold);
+  font-size: 18px;
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.cake {
+  font-size: clamp(75px, 15vw, 115px);
+  margin: 12px auto;
+  filter: drop-shadow(0 0 20px #ff9acb88);
+  animation: cakeBounce 2s ease-in-out infinite;
+}
+
+@keyframes cakeBounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.panel {
+  width: min(100%, 850px);
+  margin: 28px auto;
+  padding: 27px 20px;
+  border: 1px solid #ffffff25;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #ffffff10, #ffffff05);
+  box-shadow: 0 15px 50px #0003;
+  backdrop-filter: blur(12px);
+}
+
+.panel h2 {
+  color: var(--gold);
+  font-size: clamp(23px, 5vw, 32px);
+  margin-bottom: 10px;
+}
+
+.panel p {
+  color: #d9d2ed;
+  line-height: 1.7;
+}
+
+/* Celebration tree */
+.tree-stage {
+  height: 320px;
+  max-width: 480px;
+  margin: 15px auto 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tree-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.tree-leaf {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0);
+  transition: opacity .8s ease, transform .8s cubic-bezier(.2,1.7,.4,1);
+}
+
+.tree-leaf.grown {
+  opacity: 1;
+  transform: scale(1);
+  filter: drop-shadow(0 0 7px #baff9c);
+}
+
+.trunk {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: drawTree 3s ease forwards;
+}
+
+@keyframes drawTree {
+  to { stroke-dashoffset: 0; }
+}
+
+#celebrateBtn { margin-top: 12px; }
+
+.tree-caption {
+  margin-top: 13px;
+  color: #ffe4a3;
+  font-weight: 700;
+}
+
+/* Gift */
+.gift {
+  font-size: 95px;
+  cursor: pointer;
+  display: inline-block;
+  transition: .3s;
+  filter: drop-shadow(0 0 15px #ff9acb);
+}
+
+.gift:hover { transform: rotate(-10deg) scale(1.12); }
+
+.gift-message {
+  color: #ffe6a6;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 15px;
+  line-height: 1.7;
+}
+
+/* Game */
+.game-stats {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin: 17px 0;
+}
+
+.stat {
+  background: #ffffff12;
+  padding: 12px 20px;
+  border-radius: 14px;
+  min-width: 105px;
+}
+
+.stat strong {
+  display: block;
+  color: var(--gold);
+  font-size: 23px;
+}
+
+#arena {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  height: 310px;
+  margin: 15px auto;
+  border: 1px solid #ffffff30;
+  border-radius: 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 100%, #6b45a655, transparent 60%),
+    #09091b;
+}
+
+.game-star {
+  position: absolute;
+  font-size: 30px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  filter: drop-shadow(0 0 10px #ffe58b);
+  animation: starDrop linear forwards;
+  z-index: 2;
+}
+
+@keyframes starDrop {
+  from { transform: translateY(-40px) rotate(0); }
+  to { transform: translateY(350px) rotate(180deg); }
+}
+
+#arenaMessage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  color: #e8dcff;
+  line-height: 1.7;
+}
+
+#arenaMessage strong {
+  display: block;
+  color: var(--gold);
+  font-size: 23px;
+}
+
+.game-result {
+  color: var(--gold);
+  font-size: 19px;
+  font-weight: 800;
+  margin: 15px;
+}
+
+/* Floating decorations */
+.float-balloon {
+  position: fixed;
+  bottom: -100px;
+  z-index: 0;
+  font-size: 36px;
+  pointer-events: none;
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  to { transform: translateY(-115vh) rotate(20deg); opacity: 0; }
+}
+
+.confetti {
+  position: fixed;
+  top: -20px;
+  z-index: 20;
+  width: 9px;
+  height: 13px;
+  pointer-events: none;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  to { transform: translateY(110vh) rotate(900deg); opacity: 0; }
+}
+
+.spark {
+  position: fixed;
+  z-index: 25;
+  pointer-events: none;
+  font-size: 20px;
+  animation: spark .9s ease-out forwards;
+}
+
+@keyframes spark {
+  to { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
+}
+
+.footer {
+  margin: 35px auto 0;
+  color: #a99dbf;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.music-btn {
+  position: fixed;
+  z-index: 30;
+  top: 15px;
+  right: 15px;
+  border: 1px solid #ffffff35;
+  background: #1b1439dd;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 15px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 520px) {
+  .screen { padding: 65px 13px 40px; }
+  .intro-card { padding: 32px 17px; }
+  .panel { padding: 23px 14px; }
+  .tree-stage { height: 260px; }
+  #arena { height: 280px; }
+  .hero p { font-size: 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars-bg" id="starsBg"></div>
+
+<button class="music-btn hidden" id="musicBtn" onclick="toggleMusic()">
+  🎵 Music: OFF
+</button>
+
+<!-- INTRO -->
+<section class="screen" id="intro">
+  <div class="intro-card">
+    <div class="eyebrow">A Special Surprise Awaits</div>
+    <h1>One Magical Moment...</h1>
+    <p>
+      A special birthday celebration is waiting behind this balloon.
+      Get ready to unlock the magic!
+    </p>
+
+    <div class="balloon-area">
+      <div class="target-balloon" id="targetBalloon"></div>
+      <div class="arrow" id="arrow">➶</div>
+    </div>
+
+    <button class="primary-btn" id="shootBtn" onclick="shootArrow()">
+      🎯 POP THE BALLOON
+    </button>
+    <p style="font-size:12px;margin-top:18px;color:#a99dbf">
+      Tap the button to reveal the surprise!
+    </p>
+  </div>
+</section>
+
+<!-- BIRTHDAY CELEBRATION -->
+<section class="screen hidden" id="birthday">
+
+  <div class="hero">
+    <div class="small-title">✨ TODAY IS ALL ABOUT YOU ✨</div>
+    <h1>Happy Birthday</h1>
+    <h2 style="font-size:clamp(30px,7vw,55px);color:#ffe3a0">
+      AARUSH!
+    </h2>
+    <div class="cake">🎂</div>
+    <p>
+      A new year, a new chapter, and a thousand new reasons to smile.
+      May your special day be filled with happiness, laughter and unforgettable memories.
+    </p>
+    <div class="wish">Wishing you the most magical birthday ever! 💖</div>
+  </div>
+
+  <!-- TREE -->
+  <div class="panel">
+    <h2>🌳 A Tree of Happiness</h2>
+    <p>
+      Every beautiful memory starts with a little seed.
+      Press the button and watch this tree come alive!
+    </p>
+
+    <div class="tree-stage">
+      <svg class="tree-svg" viewBox="0 0 400 320" aria-label="A tree that grows glowing leaves">
+        <defs>
+          <linearGradient id="wood" x1="0" x2="1">
+            <stop offset="0%" stop-color="#8b4c2d"/>
+            <stop offset="50%" stop-color="#d99a55"/>
+            <stop offset="100%" stop-color="#71402e"/>
+          </linearGradient>
+        </defs>
+
+        <path class="trunk" d="M200 300 C195 250 204 205 200 155
+          M200 220 C165 195 135 170 112 125
+          M198 195 C235 165 265 135 280 95
+          M199 165 C170 140 160 110 158 78
+          M210 160 C232 130 235 100 230 65"
+          fill="none" stroke="url(#wood)" stroke-width="17"
+          stroke-linecap="round"/>
+
+        <g id="leafGroup"></g>
+        <path d="M75 301 Q200 280 325 301" fill="none"
+          stroke="#9b7548" stroke-width="4" opacity=".7"/>
+      </svg>
+    </div>
+
+    <button class="primary-btn" id="celebrateBtn" onclick="growTree()">
+      ✨ LET'S CELEBRATE!
+    </button>
+    <div class="tree-caption" id="treeCaption">
+      A little click can create a lot of magic...
+    </div>
+  </div>
+
+  <!-- GIFT -->
+  <div class="panel">
+    <h2>🎁 A Little Surprise For You</h2>
+    <p>There is one more surprise waiting. Tap the gift to open it!</p>
+    <div style="margin-top:20px">
+      <div class="gift" id="gift" onclick="openGift()">🎁</div>
+    </div>
+    <div class="gift-message hidden" id="giftMessage">
+      🌟 May your dreams shine brighter than the stars! 🌟
+      <br>
+      Keep smiling, keep shining and keep being amazing!
+      <br>Happy Birthday, Aarush! ❤️
+    </div>
+  </div>
+
+  <!-- GAME -->
+  <div class="panel">
+    <h2>⭐ Catch The Magical Stars</h2>
+    <p>
+      A little birthday challenge! Tap the falling stars and collect as many
+      as you can in 20 seconds.
+    </p>
+
+    <div class="game-stats">
+      <div class="stat">SCORE<strong id="score">0</strong></div>
+      <div class="stat">TIME<strong id="time">20</strong></div>
+      <div class="stat">BEST<strong id="best">0</strong></div>
+    </div>
+
+    <div id="arena">
+      <div id="arenaMessage">
+        <div>
+          <strong>🌟 Ready, Aarush?</strong>
+          Tap START GAME to catch the stars!
+        </div>
+      </div>
+    </div>
+
+    <button class="primary-btn" id="gameBtn" onclick="startGame()">
+      🚀 START GAME
+    </button>
+    <div class="game-result" id="gameResult"></div>
+  </div>
+
+  <div class="panel">
+    <h2>💫 One Last Birthday Wish</h2>
+    <p style="font-size:18px">
+      May every sunrise bring you hope, every sunset bring you peace,
+      and every moment bring you something worth remembering.
+    </p>
+    <div style="font-size:45px;margin-top:15px">🎈 🎉 🎂 💖</div>
+    <button class="primary-btn" onclick="finalCelebration()" style="margin-top:18px">
+      🎆 MAKE IT MAGICAL!
+    </button>
+  </div>
+
+  <div class="footer">
+    MADE WITH ✨ FOR AARUSH · HAVE AN AMAZING BIRTHDAY!
+  </div>
+</section>
+
+<script>
+/* Create background stars */
+const starsBg = document.getElementById("starsBg");
+
+for (let i = 0; i < 90; i++) {
+  const star = document.createElement("span");
+  star.className = "twinkle";
+  star.style.left = Math.random() * 100 + "%";
+  star.style.top = Math.random() * 100 + "%";
+  star.style.animationDelay = Math.random() * 3 + "s";
+  star.style.animationDuration = (1 + Math.random() * 3) + "s";
+  starsBg.appendChild(star);
+}
+
+/* Arrow and balloon reveal */
+let revealed = false;
+
+function shootArrow() {
+  if (revealed) return;
+  revealed = true;
+
+  const arrow = document.getElementById("arrow");
+  const balloon = document.getElementById("targetBalloon");
+  const button = document.getElementById("shootBtn");
+
+  button.disabled = true;
+  button.textContent = "✨ MAGIC IS HAPPENING...";
+
+  arrow.classList.add("fly");
+
+  setTimeout(() => {
+    balloon.style.transform = "scale(0)";
+    balloon.style.opacity = "0";
+    balloon.style.filter = "brightness(3)";
+    burstAt(window.innerWidth / 2, window.innerHeight / 2, 35);
+  }, 650);
+
+  setTimeout(() => {
+    document.getElementById("intro").classList.add("hidden");
+    document.getElementById("birthday").classList.remove("hidden");
+    document.getElementById("musicBtn").classList.remove("hidden");
+
+    confettiBurst(100);
+    floatBalloons();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, 1300);
+}
+
+/* Confetti */
+function confettiBurst(amount = 60) {
+  const colors = ["#ffd76a", "#ff75b9", "#a98aff", "#8cf5e4", "#ffffff"];
+
+  for (let i = 0; i < amount; i++) {
+    const piece = document.createElement("div");
+    piece.className = "confetti";
+    piece.style.left = Math.random() * 100 + "vw";
+    piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+    piece.style.animationDuration = (2 + Math.random() * 3) + "s";
+    piece.style.animationDelay = Math.random() * 1.2 + "s";
+    document.body.appendChild(piece);
+    setTimeout(() => piece.remove(), 6000);
+  }
+}
+
+/* Spark burst */
+function burstAt(x, y, amount = 20) {
+  const icons = ["✨", "⭐", "💖", "🌟", "✦"];
+
+  for (let i = 0; i < amount; i++) {
+    const spark = document.createElement("span");
+    spark.className = "spark";
+    spark.textContent = icons[Math.floor(Math.random() * icons.length)];
+    spark.style.left = x + "px";
+    spark.style.top = y + "px";
+    spark.style.setProperty("--x", (Math.random() - .5) * 260 + "px");
+    spark.style.setProperty("--y", (Math.random() - .5) * 260 + "px");
+    document.body.appendChild(spark);
+    setTimeout(() => spark.remove(), 1000);
+  }
+}
+
+/* Floating balloons */
+function floatBalloons() {
+  const emojis = ["🎈", "🎈", "🎈", "💖", "⭐"];
+
+  for (let i = 0; i < 14; i++) {
+    setTimeout(() => {
+      const balloon = document.createElement("div");
+      balloon.className = "float-balloon";
+      balloon.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      balloon.style.left = Math.random() * 95 + "vw";
+      balloon.style.animationDuration = (6 + Math.random() * 5) + "s";
+      document.body.appendChild(balloon);
+      setTimeout(() => balloon.remove(), 12000);
+    }, i * 350);
+  }
+}
+
+/* Grow the tree */
+let treeGrown = false;
+
+function growTree() {
+  const group = document.getElementById("leafGroup");
+  const button = document.getElementById("celebrateBtn");
+
+  if (treeGrown) {
+    confettiBurst(35);
+    burstAt(window.innerWidth / 2, window.innerHeight / 2, 20);
+    return;
+  }
+
+  treeGrown = true;
+  button.textContent = "💖 CELEBRATION CONTINUES!";
+  document.getElementById("treeCaption").textContent =
+    "Look! Happiness is blooming all around! 🌸";
+
+  const positions = [
+    [112,125],[95,110],[130,100],[145,140],[155,78],
+    [140,65],[170,100],[175,135],[230,65],[250,85],
+    [280,95],[300,80],[265,120],[230,130],[200,115],
+    [180,160],[220,165],[155,170],[130,155],[270,145],
+    [90,145],[310,115],[195,80],[215,95],[240,55],
+    [165,48],[120,85],[285,65],[250,155],[200,65]
+  ];
+
+  positions.forEach((pos, i) => {
+    const leaf = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+    leaf.setAttribute("cx", pos[0]);
+    leaf.setAttribute("cy", pos[1]);
+    leaf.setAttribute("rx", 10 + Math.random() * 5);
+    leaf.setAttribute("ry", 6 + Math.random() * 4);
+    leaf.setAttribute("fill", ["#a7f58a", "#73df9b", "#d2ff9d", "#68cfa3"][i % 4]);
+    leaf.setAttribute("class", "tree-leaf");
+    leaf.setAttribute("transform", `rotate(${Math.random() * 90 - 45} ${pos[0]} ${pos[1]})`);
+    group.appendChild(leaf);
+
+    setTimeout(() => leaf.classList.add("grown"), i * 90);
+  });
+
+  setTimeout(() => {
+    confettiBurst(80);
+    floatBalloons();
+    burstAt(window.innerWidth / 2, window.innerHeight / 2, 45);
+  }, 1500);
+}
+
+/* Gift */
+let giftOpened = false;
+
+function openGift() {
+  if (giftOpened) return;
+  giftOpened = true;
+
+  document.getElementById("gift").textContent = "🎊";
+  document.getElementById("giftMessage").classList.remove("hidden");
+  confettiBurst(60);
+  burstAt(window.innerWidth / 2, window.innerHeight / 2, 35);
+}
+
+/* Star game */
+let score = 0;
+let timeLeft = 20;
+let gameActive = false;
+let gameTimer = null;
+let starSpawner = null;
+let bestScore = 0;
+
+const arena = document.getElementById("arena");
+
+function startGame() {
+  if (gameActive) return;
+
+  score = 0;
+  timeLeft = 20;
+  gameActive = true;
+
+  document.getElementById("score").textContent = score;
+  document.getElementById("time").textContent = timeLeft;
+  document.getElementById("gameResult").textContent = "";
+  document.getElementById("gameBtn").textContent = "⭐ GAME RUNNING...";
+  document.getElementById("arenaMessage").classList.add("hidden");
+
+  arena.querySelectorAll(".game-star").forEach(star => star.remove());
+
+  starSpawner = setInterval(createGameStar, 650);
+
+  gameTimer = setInterval(() => {
+    timeLeft--;
+    document.getElementById("time").textContent = timeLeft;
+
+    if (timeLeft <= 0) endGame();
+  }, 1000);
+}
+
+function createGameStar() {
+  if (!gameActive) return;
+
+  const star = document.createElement("button");
+  star.className = "game-star";
+  star.textContent = ["⭐", "🌟", "✨"][Math.floor(Math.random() * 3)];
+  star.setAttribute("aria-label", "Catch star");
+  star.style.left = (5 + Math.random() * 85) + "%";
+  star.style.animationDuration = (2.2 + Math.random() * 1.2) + "s";
+
+  star.addEventListener("click", () => {
+    if (!gameActive) return;
+
+    score += 10;
+    document.getElementById("score").textContent = score;
+
+    const rect = star.getBoundingClientRect();
+    burstAt(rect.left + 15, rect.top + 15, 8);
+    star.remove();
+  });
+
+  arena.appendChild(star);
+  setTimeout(() => star.remove(), 4000);
+}
+
+function endGame() {
+  gameActive = false;
+  clearInterval(gameTimer);
+  clearInterval(starSpawner);
+
+  arena.querySelectorAll(".game-star").forEach(star => star.remove());
+
+  if (score > bestScore) bestScore = score;
+  document.getElementById("best").textContent = bestScore;
+
+  document.getElementById("gameBtn").textContent = "🔄 PLAY AGAIN";
+  document.getElementById("gameResult").textContent =
+    score >= 100
+      ? "🏆 Amazing! You are a STAR collector!"
+      : "🌟 Great effort! Keep shining, Aarush!";
+
+  const message = document.getElementById("arenaMessage");
+  message.classList.remove("hidden");
+  message.innerHTML =
+    `<div><strong>🎉 GAME OVER!</strong>Your score: ${score} points<br>Ready for another round?</div>`;
+
+  if (score >= 100) confettiBurst(50);
+}
+
+/* Final celebration */
+function finalCelebration() {
+  confettiBurst(150);
+  floatBalloons();
+
+  for (let i = 0; i < 5; i++) {
+    setTimeout(() => {
+      burstAt(
+        Math.random() * window.innerWidth,
+        Math.random() * window.innerHeight * .7,
+        30
+      );
+    }, i * 350);
+  }
+
+  if (!treeGrown) growTree();
+}
+
+/* Music using browser audio */
+let audioContext = null;
+let musicInterval = null;
+let musicOn = false;
+let noteIndex = 0;
+
+const melody = [
+  523.25, 659.25, 783.99, 659.25,
+  587.33, 698.46, 880, 698.46,
+  523.25, 659.25, 783.99, 1046.5
+];
+
+function playNote(frequency) {
+  if (!audioContext) return;
+
+  const oscillator = audioContext.createOscillator();
+  const gain = audioContext.createGain();
+
+  oscillator.type = "sine";
+  oscillator.frequency.value = frequency;
+
+  gain.gain.setValueAtTime(.0001, audioContext.currentTime);
+  gain.gain.exponentialRampToValueAtTime(.07, audioContext.currentTime + .04);
+  gain.gain.exponentialRampToValueAtTime(.0001, audioContext.currentTime + .42);
+
+  oscillator.connect(gain);
+  gain.connect(audioContext.destination);
+
+  oscillator.start();
+  oscillator.stop(audioContext.currentTime + .45);
+}
+
+async function toggleMusic() {
+  const button = document.getElementById("musicBtn");
+
+  if (!audioContext) {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) {
+      button.textContent = "🎵 Music unavailable";
+      return;
+    }
+    audioContext = new AudioContextClass();
+  }
+
+  if (audioContext.state === "suspended") {
+    await audioContext.resume();
+  }
+
+  musicOn = !musicOn;
+
+  if (musicOn) {
+    button.textContent = "🎵 Music: ON";
+    playNote(melody[noteIndex++ % melody.length]);
+
+    musicInterval = setInterval(() => {
+      playNote(melody[noteIndex++ % melody.length]);
+    }, 470);
+  } else {
+    button.textContent = "🎵 Music: OFF";
+    clearInterval(musicInterval);
+  }
+}
+</script>
+
+</body>
+</html>
